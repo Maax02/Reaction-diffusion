@@ -1,0 +1,20 @@
+start:
+
+install cython:
+python -m pip install cython
+python -m pip install cython setuptools wheel
+
+
+build cython suboru:
+python setup.py build_ext --inplace
+
+spustenie:
+python -c "import hello; print(hello.add(2,3))"
+
+
+import do blender:
+import sys
+sys.path.append(r"C:\Users\maxkr\OneDrive\Počítač\FMFI UK\0 Mgr\Master Thesis\Blender\cython")
+
+import hello
+hello.parallel_sum(50_000_000, repeats=8)
